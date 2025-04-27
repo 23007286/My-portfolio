@@ -5,16 +5,23 @@
     <title>Adi's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+       
         body {
             margin: 0;
             font-family: Calibri, sans-serif;
-            font-size: 16;
+            font-size: 16px;
             color: black;
             display: flex;
             min-height: 100vh;
             overflow: hidden;
             background-color: white;
         }
+        h1, h2, h3 {
+            font-family: Calibri, sans-serif;
+            font-size: 18px;
+        }
+    
+    
         .sidebar {
             background-color: white;
             color: black;
@@ -61,6 +68,7 @@
         section {
             display: none;
             animation: fadeIn 0.5s;
+            text-align: center;
         }
         section.active {
             display: block;
@@ -74,14 +82,14 @@
             margin-top: 50px;
         }
         .profile-pic {
-            width: 300px;
-            height: 350px;
-            border-radius: 70%;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
             object-fit: cover;
             object-position: center;
             display: block;
             border: 5px solid white;
-            box-shadow: 0px 0px 15px rgba(0,0,0,0,3);
+            box-shadow: 0 4px 8px rgba(0,0,0,0,3);
             margin: 20px auto;
         }
         .home h1 {
@@ -111,16 +119,15 @@
             }
         }
     </style>
-
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+ <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
 
     <div class="sidebar">
         <h2 class="highlight">Adi's Portfolio</h2>
-        <a href="#home" onclick="showSection('homepage')"><i class="fas fa-home"></i> 🏠 Homepage</a>
-        <a href="#about" onclick="showSection('about')"><i class="fas fa-user"></i> 👤 About Me</a>
+        <a href="#homepage" onclick="showSection('homepage')"><i class="fas fa-home"></i> 🏠 Homepage</a>
+        <a href="#about me" onclick="showSection('about')"><i class="fas fa-user"></i> 👤 About Me</a>
         <a href="#projects" onclick="showSection('projects')"><i class="fas fa-briefcase"></i> 📁 Projects</a>
         <a href="#contact" onclick="showSection('contact')"><i class="fas fa-envelope"></i> ✉ Contact</a>
     </div>
@@ -142,7 +149,7 @@
         <section id="projects">
             <div class="project">
                 <h3>Personal Portfolio Website</h3>
-                <p>I've designed and built a responsive portfolio using HTML and CSS to showcase my work and skills.  Hoseted on Github Pages.</p>
+                <p>I've designed and built a responsive portfolio using HTML and CSS to showcase my work and skills.  Hosted on Github Pages.</p>
             </div>
     
             <div class="project">
@@ -155,7 +162,7 @@
             <h1>Contact</h1>
             <p>Email: <a href="mailto:adivhahomanzere@gmail.com">adivhahomanzere@gmail.com</a></p>
             <p>GitHub: <a href="https://github.com/23007286" target="_blank">My GitHub</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/Adivhaho Maria Manzere" target="_blank">My LinkedIn</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/Adivhaho-Maria-Manzere" target="_blank">My LinkedIn</a></p>
         </section>
     </div>
 
