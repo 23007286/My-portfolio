@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adi's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Calibri, sans-serif;
+            font-size: 16;
+            color: black;
+            display: flex;
+            min-height: 100vh;
+            overflow: hidden;
+            background-color: white;
+        }
+        .sidebar {
+            background-color: white;
+            color: black;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100%;
+            padding-top: 20px;
+        }
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: black;
+        }
+        .sidebar a {
+            padding: 15px 20px;
+            text-decoration: none;
+            color: black;
+            display: flex;
+            align-items: center;
+            transition: background 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #f06292;
+        }
+        .sidebar a i {
+            margin-right: 10px;
+        }
+
+        .main {
+            margin-left: 250px;
+            padding: 20px;
+            background-color: #ffc0cb;
+            flex-grow: 1;
+            overflow-y: auto;
+            padding-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        section {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        section.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        .home {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .profile-pic {
+            width: 300px;
+            height: 350px;
+            border-radius: 70%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            border: 5px solid white;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0,3);
+            margin: 20px auto;
+        }
+        .home h1 {
+            color: black;
+        }
+        .footer {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }       
+        .highlight {
+            color: darkred;
+        }
+
+        @media(max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+            .main {
+                margin-left: 200px;
+            }
+        }
+    </style>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2 class="highlight">Adi's Portfolio</h2>
+        <a href="#home" onclick="showSection('homepage')"><i class="fas fa-home"></i> 🏠 Homepage</a>
+        <a href="#about" onclick="showSection('about')"><i class="fas fa-user"></i> 👤 About Me</a>
+        <a href="#projects" onclick="showSection('projects')"><i class="fas fa-briefcase"></i> 📁 Projects</a>
+        <a href="#contact" onclick="showSection('contact')"><i class="fas fa-envelope"></i> ✉ Contact</a>
+    </div>
+
+    <div class="main">
+        <section id="homepage" class="active homepage">
+            <h1><span class="highlight">WELCOME TO MY PERSONAL PORTFOLIO WEBSITE</span></h1>
+            <p>Future Web Developer, Passionate about Technology!</p>
+            <img src="Adivhaho.jpg" alt="My Photo" class="profile-pic">
+        </section>
+
+        <section id="about">
+            <h1>About Me</h1>
+            <p>Hello! I am Manzere Adivhaho Maria, a BSc in Computer Science student at the University Of Venda. I have a strong academic background and passion for technology.</p>
+            <p>Skills: HTML, CSS, JavaScript, etc.</p>
+            <p>Career Goal: My dream is to become a skilled software engineer specializing in web technologies and to grow my career in web development and user experience design.</p>
+        </section>
+
+        <section id="projects">
+            <div class="project">
+                <h3>Personal Portfolio Website</h3>
+                <p>I've designed and built a responsive portfolio using HTML and CSS to showcase my work and skills.  Hoseted on Github Pages.</p>
+            </div>
+    
+            <div class="project">
+                <h3>Student Management System</h3>
+                <p>I've developed a system to manage student records using Java and MySQL database.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1>Contact</h1>
+            <p>Email: <a href="mailto:adivhahomanzere@gmail.com">adivhahomanzere@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/23007286" target="_blank">My GitHub</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/Adivhaho Maria Manzere" target="_blank">My LinkedIn</a></p>
+        </section>
+    </div>
+
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach((section) => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+    <div class="footer">
+        &copy; 2025 Manzere Adivhaho . All Rights Reserved.
+    </div>
+
+</body>
+</html>
